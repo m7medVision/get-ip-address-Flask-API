@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def main_route():
-    return redirect('/get_my_ip')
+    return redirect('/get_my_ip'), 308
 
 @app.route("/get_my_ip", methods=["GET"])
 def get_my_ip():
